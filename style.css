@@ -1,0 +1,12 @@
+html, body {
+    padding: 25px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.col-sm {
+    cursor: pointer;
+    font-size: 15px;
+} 
