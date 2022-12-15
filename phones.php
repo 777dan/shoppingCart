@@ -1,5 +1,10 @@
 <?php ob_start(); ?>
 <?php 
+if (isset($_COOKIE['count'])) {
+    $count = $_COOKIE['count'];
+} else {
+    $count = 0;
+}
 $models = ['Samsung A70', 'Samsung J7', 'Samsung J5', 'Samsung A50', 'Samsung S20', 'Samsung S21', 'Samsung 6S+'];
 include("cart.php"); ?>
 <!DOCTYPE html>

@@ -21,6 +21,7 @@
         </div>
     </form>
     <?php
+    // setcookie("cart");
     $elemNames = ['phones', 'tablets', 'laptops'];
     for ($i = 0; $i < count($elemNames); $i++) {
         if (isset($_POST[$elemNames[$i]])) {

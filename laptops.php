@@ -1,5 +1,10 @@
 <?php ob_start(); ?>
 <?php
+if (isset($_COOKIE['count'])) {
+    $count = $_COOKIE['count'];
+} else {
+    $count = 0;
+}
 $models = ['Microsoft Surface Laptop 3', 'ASUS Zenbook Flip', 'Lenovo ThinkPad X13 Yoga', 'Lenovo ThinkPad X13 Yoga'];
 include("cart.php"); ?>
 <!DOCTYPE html>

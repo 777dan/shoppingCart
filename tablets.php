@@ -1,5 +1,10 @@
 <?php ob_start(); ?>
 <?php
+if (isset($_COOKIE['count'])) {
+    $count = $_COOKIE['count'];
+} else {
+    $count = 0;
+}
 $models = ['Galaxy Tab S7 Plus', 'Microsoft Surface Pro 7', 'Apple A2377 iPadPro 11', 'HONOR Pad V6', 'Lenovo Tab M10 Plus', 'HUAWEI MediaPad M6'];
 include("cart.php"); ?>
 <!DOCTYPE html>
