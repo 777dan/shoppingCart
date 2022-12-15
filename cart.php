@@ -28,12 +28,16 @@ function output()
 if (isset($_COOKIE['cart'])) {
   output();
 }
+
+$buttonsDelArr = [];
 for ($i = 0; $i < count($_COOKIE['cart']); $i++) {
-  $buttonsDel = "del" . $i;
-  if (isset($_POST[$buttonsDel])) {
-    $buttonsDelReplaced = ((int)(str_replace("del", "", $buttonsDel))) - 1;
+  $buttonsDelArr[$i] = "del" . $i;
+}
+for ($i = 0; $i < count($buttonsDelArr); $i++) {
+  if (isset($_POST[$buttonsDelArr[$i]])) {
+    // $buttonsDelReplaced = ((int)(str_replace("del", "", $buttonsDel))) - 1;
     // echo $buttonsDelReplaced;
-    $_COOKIE["cart[$buttonsDelReplaced]"] = "";
+    $_COOKIE["cart[$buttonsDelArr[$i]"] = "";
     output();
   }
 }
